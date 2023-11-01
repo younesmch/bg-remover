@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* BlogPost.css */
+.blog-post {
+  background-color: #0aedea;
+  border: 4px solid #e2ec2b;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  float: left;
+  box-shadow: 0px -5px 30px 0px #0aedea;
+}
+
+.blog-post h2 {
+  font-size: 24px;
+}
+
+.blog-post p {
+  font-size: 16px;
+}
+
+.blog-post small {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  /* Mobile styles */
+  .blog-post {
+    margin: 10px;
+  }
+  .related-posts {
+    margin: 10px;
+    max-width:100%;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Desktop styles */
+  .blog-post {
+    width: 50%;
+  }
+  .related-posts {
+    max-width: 40%;
+    
+  }
+ 
+}
+.blog-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.clear {
+  clear: both;
+}
+
+/* RelatedPosts.css */
+.related-posts {
+  margin: 20px;
+ 
+
+  float: right;
+}
+
+.related-post {
+  border: 3px solid #e7f043;
+  max-width: 100%;
+  background-color: #0aedea;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  box-shadow: 0px -5px 20px 0px #0aedea;
+}
+
+.related-image {
+  max-width: 100%;
+
+  height: auto;
+  display: block;
+}
+.blog-post-container {
+  display: inline-block;
+  width: 100%;
+}
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #cd3535 -78.47%,
+    #1300e8 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+.bg-besttt {
+  background:linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #cd3535 -78.47%,
+    #1300e8 91.61%
+  );
+}
+.app {
+  
+  margin-right: 0%;
+  width: 40%;
+  height: 40%;
+  text-align: center;
+  margin-top: 20px;
+  display: flex; /* Use flexbox for positioning */
+  justify-content: flex-start; /* Align to the left */
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align children to the left */
+}
+
+.segmented-buttons {
+  display: flex;
+  border-radius:5px;
+
+
+}
+.button-text {
+  margin-left: 10px; 
+  margin-right: 10px;/* Add margin to the button text */
+  margin-bottom:6px;
+  color: yellow
+}
+
+.segmented-buttonL {
+  display: flex;
+  flex-direction: row; /* Place buttons horizontally */
+  font-size: large;
+  height: 35px;
+  border-radius: 5px;
+  background-color:  #5e017f;
+  border: 3px solid yellow;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+.segmented-buttonR {
+  
+  text-align: center;
+  display: flex;
+  flex-direction: row; /* Place buttons horizontally */
+  border-radius: 5px;
+  height: 35px;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:  #0cf600;
+  border: 3px solid yellow;
+  cursor: pointer;
+}
+
+/* Style the active button */
+.segmented-buttonL.active {
+  background-color: #007bff;
+  color: #fff;
+}
+.segmented-buttonR.active {
+  background-color: #007bff;
+  color: #fff;
+}
+/* Invert the color for the active button */
+.segmented-buttonL.active:hover {
+  background-color: #fff;
+  color: #007bff;
+  border-radius:5px;
+}
+.segmented-buttonR.active:hover {
+  background-color: #fff;
+  color: #007bff;
+  border-radius:5px;
+}
+.option-content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+
+.image-frame {
+  border: 3px solid yellow;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background:    url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjkzNyA3LjkzOCIgaGVpZ2h0PSIzMCIgd2lkdGg9IjMwIj48cGF0aCBwYWludC1vcmRlcj0ic3Ryb2tlIGZpbGwgbWFya2VycyIgZD0iTS4wMTQuMDE0SDMuOTdWMy45N0guMDE0ek0zLjk3IDMuOTY4aDMuOTU0djMuOTU1SDMuOTd6IiBmaWxsPSIjZWVlZmYwIi8+PC9zdmc+) repeat top left #FFF;;
+ /* Example background color */
+  border-radius:5px;
+}
+
+.button-container {
+  position: absolute;
+ 
+}
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.834)
+      url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center
+      no-repeat;
+  z-index: 1;
+}
+.button {
+  margin: 0 0px;
+}
+
+.image {
+  max-width: 100%;
+}
+
+/* You can add more styles to customize the frame appearance */
+
+.bg-purpple-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #e2dde4 -43.27%,
+    #debceb -21.24%,
+    #ce7dec 12.19%,
+    #c752f1 29.82%,
+    #b826ed 51.94%,
+    #5e017f 90.29%
+  );
+}
+.bg-green-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #d8e5dc -43.27%,
+    #ede9e9 -21.24%,
+    #85eaa3 12.19%,
+    #4fe47b 29.82%,
+    #1fe85b 51.94%,
+    #02fd4d 90.29%
+  );
+}
+.bg-red-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #f6f6f0 -43.27%,
+    #f6f6c5 -21.24%,
+    #f0f08c  12.19%,
+    #f1f14c  29.82%,
+    #FFFF00  51.94%,
+    #FFFF00  90.29%
+  );
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 300px; /* Adjust the width and height as needed */
+  height: 300px;
+}
+
+@keyframes blurAnimation {
+  0%, 100% {
+    filter: blur(0); /* No blur at the start and end */
+  }
+  50% {
+    filter: blur(10px); /* Maximum blur in the middle of the animation */
+  }
+}
+
+.image {
+ max-width: 100%;
+  max-height: 100%;
+  
+  
+  display: inline-block; /* Allow vertical alignment */
+  position: absolute; 
+  top: 50%; /* Move image to 50% from the top */
+  left: 50%; /* Move image to 50% from the left */
+  transform: translate(-50%, -50%); /* Center vertically and horizontally */
+
+ 
+ 
+ /* animation: blurAnimation 2s infinite; /* Use the keyframes animation */
+}
+
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  );
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* Hide the default file input text */
+.custom-file-label::after {
+  content: none; /* Hide the text */
+}
+
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-card:hover {
+  background: var(--black-gradient);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #07efe3 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
