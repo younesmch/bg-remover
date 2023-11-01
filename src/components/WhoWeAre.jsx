@@ -6,8 +6,8 @@ import Footer from "./Footer";
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { AboutUsfeatures, features } from "../constants";
-import { useTranslation } from 'react-i18next';
-import Button from "./Button";
+
+
 const scrollToTop = () => {
     window.scrollTo(0, 0)
 }
