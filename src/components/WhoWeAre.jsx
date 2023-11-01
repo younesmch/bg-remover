@@ -12,7 +12,7 @@ const scrollToTop = () => {
 import axios from 'axios';
 import './i18n';
 import Business from "./Business";
-import Whowearepage from "./Whowearepage";
+/*import Whowearepage from "./Whowearepage";*/
 const WhoWeAre = () => {
 
     const { t, i18n } = useTranslation();
@@ -34,7 +34,7 @@ const WhoWeAre = () => {
         <div><Navbar className="w-full flex py-6 justify-between items-center navbar" ></Navbar></div>
         <div className={`${styles.boxWidth}`}>
 
-            <Whowearepage></Whowearepage>
+           {/*<Whowearepage></Whowearepage>*/} 
         </div>
 
 
