@@ -12,7 +12,7 @@ const scrollToTop = () => {
 import axios from 'axios';
 import './i18n';
 import Business from "./Business";
-import Whowearepage from "./whowearepage";
+import Whowearepage from "./Whowearepage";
 const WhoWeAre = () => {
 
     const { t, i18n } = useTranslation();
