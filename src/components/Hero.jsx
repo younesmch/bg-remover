@@ -29,22 +29,31 @@ const Hero = () => {
 
       try {
         handleOptionChange("Result");
-        const formData = new FormData();
-        formData.append('image', file);
-        
-        console.log("request sended")
-        // Replace 'your-server-url' with the actual URL of your server endpoint
-        const res = await axios.post('https://bg-remover-api-new.onrender.com/process', formData,{headers: {
-          'Access-Control-Allow-Origin': '*', 'Content-Type': 'multipart/form-data'
-        
-        }} );
-       const url = res.data.url
-         console.log(url)
+        const form = new FormData()
+        form.append('image_file', file)
 
-
-        setFileUrl2( url)
+        fetch('https://clipdrop-api.co/remove-background/v1', {
+          method: 'POST',
+          headers: {
+            'x-api-key': 'b69c831c51a40d258f9492a77ce4bc29f9194e1a901a25fe704044350bbe91dc977ac30852d177dd735f18652c82cb0d',
+          },
+          body: form,
+        })
+          .then(response => response.arrayBuffer())
+          .then(buffer => {
+            // buffer here is a binary representation of the returned image
+            const imageUrl = URL.createObjectURL(new Blob([buffer]));
+        console.log(buffer)
+         console.log(imageUrl)
+         setFileUrl2( imageUrl)
         setLoading(false)
 
+          })
+        
+        
+
+
+        
         //setFileUrl(URL.createObjectURL(e.target.files[0]))
       } catch (error) {
         console.error('Error submitting form:', error);
