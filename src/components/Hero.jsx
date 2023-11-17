@@ -33,6 +33,7 @@ const Hero = () => {
         formData.append('image', file);
         axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
         axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+        console.log("request sended")
         // Replace 'your-server-url' with the actual URL of your server endpoint
         const res = await axios.post('https://bg-remover-api-new.onrender.com/process', formData, {
 
