@@ -30,18 +30,18 @@ const Hero = () => {
       try {
         handleOptionChange("Result");
         const formData = new FormData();
-        formData.append('file', file);
+        formData.append('image', file);
 
         // Replace 'your-server-url' with the actual URL of your server endpoint
-        const res = await axios.post('http://localhost:5000/image', formData, {
+        const res = await axios.post('https://bg-remover-api-new.onrender.com/process', formData, {
 
 
         });
-        const url = res.data.url
+       const url = res.data.url
+         console.log(url)
 
 
-
-        setFileUrl2("http://localhost:5000/" + url)
+        setFileUrl2( url)
         setLoading(false)
 
         //setFileUrl(URL.createObjectURL(e.target.files[0]))
