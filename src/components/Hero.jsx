@@ -35,7 +35,7 @@ const Hero = () => {
         console.log("request sended")
         // Replace 'your-server-url' with the actual URL of your server endpoint
         const res = await axios.post('https://bg-remover-api-new.onrender.com/process', formData,{headers: {
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': '*', 'Content-Type': 'multipart/form-data'
         
         }} );
        const url = res.data.url
